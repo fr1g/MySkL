@@ -1,0 +1,13 @@
+command /setvar [<text>] [<text>]: # [<text>] oho cannot make it abled to parsed in time
+    trigger:
+        sender has permission "admin":
+            set {_pass} to 1st arg
+            set {%{_pass}%} to arg-2
+            send ""
+            make sender execute command "/evalvar %1st arg%"
+
+command /evalvar [<text>]:
+    trigger:
+        sender has permission "admin":
+            set {_pass} to 1st arg
+            send "%{_pass}%: %{%{_pass}%}%"
