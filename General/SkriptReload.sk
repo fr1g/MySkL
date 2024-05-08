@@ -1,0 +1,5 @@
+# to reload scripts by using skr skr
+command /skr:
+    trigger:
+        sender has permission "admin":
+            make sender execute command "/sk reload scripts"
