@@ -1,6 +1,6 @@
-# this only tested under 2.7
+# this only tested under 2.7 and 2.8
 command /evalvar [<text>]:
     trigger:
         sender has permission "admin":
-            set {_pass} to "{%arg-1%}"
-            send "%%%{_pass}%%%"
+            set {_pass} to "%arg-1%"
+            send "%{_pass}%: %{%{_pass}%}%"
